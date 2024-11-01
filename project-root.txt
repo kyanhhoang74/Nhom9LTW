@@ -1,0 +1,54 @@
+project-root/
+├── backend/                 # Thư mục backend
+│   ├── config/              # Cấu hình kết nối cơ sở dữ liệu
+│   │   └── db.js            # Kết nối MongoDB
+│   ├── controllers/         # Xử lý logic cho từng route
+│   │   ├── productController.js    # Controller cho sản phẩm
+│   │   ├── userController.js       # Controller cho người dùng
+│   │   └── orderController.js      # Controller cho đơn hàng
+│   ├── models/              # Các model cho MongoDB
+│   │   ├── Product.js       # Model sản phẩm
+│   │   ├── User.js          # Model người dùng
+│   │   └── Order.js         # Model đơn hàng
+│   ├── routes/              # Định nghĩa các endpoint của API
+│   │   ├── productRoutes.js # Route cho sản phẩm
+│   │   ├── userRoutes.js    # Route cho người dùng
+│   │   └── orderRoutes.js   # Route cho đơn hàng
+│   ├── middleware/          # Middleware cho xác thực và xử lý lỗi
+│   │   ├── authMiddleware.js # Middleware xác thực người dùng
+│   │   └── errorMiddleware.js # Middleware xử lý lỗi
+│   ├── utils/               # Các tiện ích, hàm phụ trợ
+│   ├── .env                 # File môi trường (các biến như MONGO_URI)
+│   ├── server.js            # Điểm vào của ứng dụng backend
+│   └── package.json         # Thông tin và các dependency của backend
+
+├── client/                  # Thư mục frontend
+│   ├── public/              # Thư mục public của React
+│   │   └── index.html       # File HTML gốc
+│   ├── src/                 # Thư mục chứa mã nguồn React
+│   │   ├── components/      # Các component dùng chung
+│   │   │   ├── Header.js    # Component cho header
+│   │   │   ├── Footer.js    # Component cho footer
+│   │   │   └── ProductCard.js # Component hiển thị sản phẩm
+│   │   ├── pages/           # Các trang chính
+│   │   │   ├── HomePage.js  # Trang chủ
+│   │   │   ├── ProductPage.js # Trang chi tiết sản phẩm
+│   │   │   ├── CartPage.js  # Trang giỏ hàng
+│   │   │   └── AdminPage.js # Trang quản trị viên
+│   │   ├── api/             # Thư mục gọi các API backend
+│   │   │   ├── productAPI.js # Gọi API sản phẩm
+│   │   │   ├── userAPI.js    # Gọi API người dùng
+│   │   │   └── orderAPI.js   # Gọi API đơn hàng
+│   │   ├── App.js           # Component gốc của ứng dụng
+│   │   ├── index.js         # Điểm vào chính của React
+│   │   ├── store/           # Thư mục cho quản lý trạng thái (Redux hoặc Context)
+│   │   │   ├── productSlice.js # Slice quản lý trạng thái sản phẩm
+│   │   │   ├── userSlice.js # Slice quản lý trạng thái người dùng
+│   │   │   └── orderSlice.js # Slice quản lý trạng thái đơn hàng
+│   │   └── styles/          # Thư mục chứa CSS
+│   │       └── main.css     # CSS chính cho ứng dụng
+│   ├── .env                 # File môi trường cho frontend (nếu cần)
+│   └── package.json         # Thông tin và các dependency của frontend
+
+├── .gitignore               # Các file/thư mục không cần đưa lên Git
+└── README.md                # Hướng dẫn sử dụng và thông tin dự án
